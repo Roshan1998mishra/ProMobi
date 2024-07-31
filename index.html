@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMobi Task</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+</head>
+<body>
+    <h1>Store Products</h1>
+    <input type="text" id="search-bar" placeholder="Search products..." oninput="filterProducts()">
+    <div class="container">
+        <div class="filters">
+            <h2>Filters</h2>
+            <label>
+                <input type="checkbox" name="category" value="men's clothing" onchange="filterProducts()"> Men's Clothing
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="category" value="women's clothing" onchange="filterProducts()"> Women's Clothing
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="category" value="jewelery" onchange="filterProducts()"> Jewelery
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="category" value="electronics" onchange="filterProducts()"> Electronics
+            </label>
+        </div>
+        <div id="product-list" class="product-list"></div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cart-list"></div>
+            <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="./Script/main.js"></script>
+</body>
+</html>
